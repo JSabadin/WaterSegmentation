@@ -59,19 +59,7 @@ def load_data(batch_size=4, imagesize=(224, 224)):
     train_samples = [os.path.join(image_root, f) for i, f in enumerate(all_samples) if i % 5 != 3 and i % 5 != 4]
     val_samples = [os.path.join(image_root, all_samples[i]) for i in range(len(all_samples)) if i % 5 == 3]
     test_samples = [os.path.join(image_root, all_samples[i]) for i in range(len(all_samples)) if i % 5 == 4]
-    ######## ablation study #####################################################################
-    # all_samples = sorted(os.listdir(image_root))
-    # total_samples = len(all_samples)
-
-    # # Calculate split indices
-    # train_end = int(total_samples * 0.6)
-    # val_end = train_end + int(total_samples * 0.2)
-
-    # # Split the datasets
-    # train_samples = [os.path.join(image_root, f) for f in all_samples[:train_end]]
-    # val_samples = [os.path.join(image_root, f) for f in all_samples[train_end:val_end]]
-    # test_samples = [os.path.join(image_root, f) for f in all_samples[val_end:]]
-    #############################################################################################
+    
     # Create instances of the modified ImageFolder class for both train and test datasets
     train_dataset = ImageFolder(
         root=image_root,
