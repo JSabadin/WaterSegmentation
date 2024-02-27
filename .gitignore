@@ -1,0 +1,8 @@
+test.py
+yolov8n.pt
+seminar_ST_2023_24/**
+__pycache__/
+checkpoints/*
+logs/*
+figure.png
+yolo1.png
